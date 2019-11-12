@@ -18,7 +18,7 @@ import pandas as pd
 
 # In[26]:
 
-
+#creates connection, all functions will start by calling this
 def connect():
     global cnx
     cnx = mysql.connector.connect(
@@ -38,7 +38,11 @@ def query(query_string):
     cursor = cnx.cursor()
     
     cursor.execute(query_string)
-    return cursor.fetchall()
+    results = cursor.fetchall()
+    #close out db connection
+    cursor.close()
+    cnx.close()
+    return results
 
 
 #pass in a SELECT * FROM colleges and it returns results in a pandas dataframe
@@ -50,4 +54,25 @@ def query_to_df(query_string):
     
     df = pd.DataFrame(cursor.fetchall())
     df.columns = [x[0] for x in cursor.description]
+    
+    cursor.close()
+    cnx.close()
     return df
+
+#pass in a create table statement will, if table does not exist it will be created
+def create_table(query):
+    connect()
+    
+    try:
+        print("Creating a new table")
+        cursor.execute(query)
+    except mysql.connector.Error as err:
+        if err.errno == errorcode.ER_TABLE_EXISTS_ERROR:
+            print("already exists.")
+        else:
+            print(err.msg)
+    else:
+        print("OK")
+
+    cursor.close()
+    cnx.close()
