@@ -76,3 +76,35 @@ def create_table(query):
 
     cursor.close()
     cnx.close()
+    
+#takes a list of tuples and adds them to the db    
+def db_insert_uni(uni_tuple_list):
+    connect()
+    insert_statement = """INSERT IGNORE INTO payscale_colleges(
+                   uni,
+                   uni_type,
+                   early_car_pay,
+                   mid_car_pay,
+                   high_meaning,
+                   stem_deg)
+                   VALUES (%s,%s,%s,%s,%s,%s)"""
+    cursor.executemany(insert_statement, uni_tuple_list)
+    cnx.commit()
+    cursor.close()
+    cnx.close()
+    
+#takes uni_dict and converst to list of tules then inserts into the db
+def tuple_payscale_uni(uni_dict):
+    list_of_tuples = []
+    for uni in uni_dict:
+        temp_tuple = ()
+        temp_tuple = (uni['university'],
+              uni['uni_type'],
+              uni['early_car_pay'],
+              uni['med_car_pay'],
+              uni['high_meaning'],
+              uni['stem_deg'])
+        list_of_tuples.append(temp_tuple)
+    db_insert_uni(list_of_tuples)
+    
+    
