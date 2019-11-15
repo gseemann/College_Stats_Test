@@ -69,19 +69,19 @@ We began by scraping data from a few different websites.
   out_cost	
  
   tuition	
-    private schools only
-    int = yearly tuition cost
+    -private schools only
+    -int = yearly tuition cost
   in_tuition
-    public schools only
-    int = yearly in state tuition 
+    -public schools only
+    -int = yearly in state tuition 
   out_tuition	
-    public schools only
-    int = yearly out of state tuition 
+    -public schools only
+    -int = yearly out of state tuition 
   room_and_board 
-    int avg yearly cost of room and board
+    -int avg yearly cost of room and board
   avg_pcent_need_met	
     
   avg_f_award	
     
   avg_indebted
-    int = average student debt when finished
+    -int = average student debt when finished
