@@ -6,10 +6,14 @@ Some specific analysis included looking at the relationships our metrics had on 
 
 # File breakdown
 payscale_uni_webscrape.py
-  -all functions associated with scraping payscale website
-query_helper.py
-  -helper functions to query and commit data to mySQL AWS database
+
+  - all functions associated with scraping payscale website
+query_helper.py 
+
+  - helper functions to query and commit data to mySQL AWS database
+  
 Gabriel.ipynb
+
   - contain call to begin webscrape process for payscale.com
   - EDA looking at relationships between public private
 Sasha_EDA.ipynb
