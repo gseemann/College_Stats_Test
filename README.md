@@ -16,11 +16,14 @@ Gabriel.ipynb
 
   - contain call to begin webscrape process for payscale.com
   - EDA looking at relationships between public private
+  
 Sasha_EDA.ipynb
 
 Sasha_Scraping-bad.ipynb
 
 Sasha_Scraping.ipynb
+
+  - web scraping and data cleaning from Uni rank and College Data
  
 # Process
 We began by scraping data from a few different websites.
