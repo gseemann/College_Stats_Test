@@ -4,6 +4,9 @@ For this Project we looked at the cost of tuition, housing, SAT scores, reported
 We wanted to see if there was any relationship between these items. 
 Some specific analysis included looking at the relationships our metrics had on reported early and mid career pay. 
 
+# Presentation
+  - https://docs.google.com/presentation/d/1Rq42FfeBnR6VIj35EqjcJjcqGqnE_cxVtvPF3ujNfNY/edit?usp=sharing
+
 # File breakdown
 payscale_uni_webscrape.py
 
