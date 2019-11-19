@@ -4,19 +4,29 @@ For this Project we looked at the cost of tuition, housing, SAT scores, reported
 We wanted to see if there was any relationship between these items. 
 Some specific analysis included looking at the relationships our metrics had on reported early and mid career pay. 
 
+# Presentation
+  - https://docs.google.com/presentation/d/1Rq42FfeBnR6VIj35EqjcJjcqGqnE_cxVtvPF3ujNfNY/edit?usp=sharing
+
 # File breakdown
 payscale_uni_webscrape.py
-  -all functions associated with scraping payscale website
-query_helper.py
-  -helper functions to query and commit data to mySQL AWS database
+
+  - all functions associated with scraping payscale website
+query_helper.py 
+
+  - helper functions to query and commit data to mySQL AWS database
+  
 Gabriel.ipynb
+
   - contain call to begin webscrape process for payscale.com
   - EDA looking at relationships between public private
+  
 Sasha_EDA.ipynb
 
 Sasha_Scraping-bad.ipynb
 
 Sasha_Scraping.ipynb
+
+  - web scraping and data cleaning from Uni rank and College Data
  
 # Process
 We began by scraping data from a few different websites.
